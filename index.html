@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Poder del Interés - Calculadora Financiera</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="calculator-container">
+        <h1>El Poder del Interés</h1>
+        
+        <div id="interest-type">
+            <h2>Tipo de Interés</h2>
+            <label><input type="radio" name="interest-type" value="simple" checked> Simple</label>
+            <label><input type="radio" name="interest-type" value="compound"> Compuesto</label>
+        </div>
+        
+        <div id="input-fields">
+            <div class="input-group">
+                <label for="principal">Principal (COP):</label>
+                <input type="range" id="principal" min="1000" max="10000000" step="1000" value="1000000">
+                <output for="principal">1,000,000</output>
+            </div>
+            <div class="input-group">
+                <label for="rate">Tasa de Interés Anual (%):</label>
+                <input type="range" id="rate" min="0.1" max="20" step="0.1" value="5">
+                <output for="rate">5.0</output>
+            </div>
+            <div class="input-group">
+                <label for="time">Tiempo (años):</label>
+                <input type="range" id="time" min="1" max="30" step="1" value="10">
+                <output for="time">10</output>
+            </div>
+        </div>
+        
+        <div id="results">
+            <h2>Resultados</h2>
+            <div id="chart"></div>
+            <div id="summary-table"></div>
+        </div>
+        
+        <div id="scenarios">
+            <h2>Escenarios Predefinidos</h2>
+            <button id="scenario-university">Ahorro para la Universidad</button>
+            <button id="scenario-phone">Compra de Celular a Crédito</button>
+            <button id="scenario-investment">Inversión a Largo Plazo</button>
+        </div>
+        
+        <div id="goal-calculator">
+            <h2>Calculadora de Metas</h2>
+            <input type="number" id="goal-amount" placeholder="Meta financiera (COP)">
+            <button id="calculate-goal">Calcular Ahorro Mensual</button>
+            <div id="goal-results"></div>
+        </div>
+        
+        <div id="interest-game">
+            <h2>Adivina el Interés</h2>
+            <p id="game-scenario"></p>
+            <input type="number" id="game-guess" placeholder="Tu respuesta">
+            <button id="check-guess">Comprobar</button>
+            <p id="game-feedback"></p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
